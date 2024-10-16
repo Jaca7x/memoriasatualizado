@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Memórias Morelli Miguel Costa 2024 3ºF</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="style.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- barra lateral/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">FECHAR</a> 
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">MEMÓRIAS</a> 
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PROFESSORES</a> 
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">MOMENTOS</a>
+</nav>
+
+<!-- Menu superior em telas pequenas -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">MEMÓRIAS</span>
+  <img src="img/morelli.png" class="morelli">
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Efeito de sobreposição ao abrir a barra lateral em telas pequenas -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !CONTEÚDO DA PÁGINA! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+  
+  <!-- Grade de fotos -->
+  <div class="w3-row w3-grayscale-min">
+    <div class="w3-quarter">
+      <img src="img/patetasbuiu.png" style="width:100%" onclick="onClick(this)" alt="3 patetas com nosso grande professor e amigo BUIU o monstro firmeza d+ o homi😎">
+      <img src="img/aline.png" style="width:100%" onclick="onClick(this)" alt="Eu e o mano Gabardão ou pra Aline como ela o chama Shortinho, umas da prof mais zika que nois ja teve além disso A TERRA É PLANA ALINE!!!!🙌">
+      <img src="img/me.png" style="width:100%" onclick="onClick(this)" alt="Eu todo gato mostrando minha beleza pra câmeras💋">
+   </div>
+    
+   <div class="w3-quarter">
+      <img src="img/indio.png" style="width:100%" onclick="onClick(this)" alt="Trabalho de sociologia sobre povos originários tive que ir no estilo pra falar sobre os xetás tlgd🧢🧢">
+      <img src="img/gabriel.png" style="width:100%" onclick="onClick(this)" alt="Eu e meu mano Gabrie Petroleo, baita amigão meu ai vestindo a blusa da litle karol(namorada dele)🧥">
+      <img src="img/ganso.png" style="width:100%" onclick="onClick(this)" alt="SIMPLESMENTE O MEU GANSO, que fico famoso ai no insta após aparecer nas fotos com essas 2 lendas ai!🦢">
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="img/patetasem4.png" style="width:100%" onclick="onClick(this)" alt="O melhor grupo do 3ºF since 2024 simplesmente era 10 em todas as matérias💯">
+      <img src="img/brian.png" style="width:100%" onclick="onClick(this)" alt="Eu e o mano Gabardão aloprando o kureke(Bryan)🤣">
+      <img src="img/gabardão.png" style="width:111%" onclick="onClick(this)" alt="Fotozinha com meu mano Gabardão📸">
+    </div>
+
+    <div class="w3-quarter">
+      <img src="img/painoestilo.png" style="width:100%" onclick="onClick(this)" alt="O pai com 7 anos indo conquistar o coração de todas as mulieres da escolhinha💕">
+      <img src="img/gabardo loko.png" style="width:100%" onclick="onClick(this)" alt="Gabardão nesse dia não estava puro... ESTAVA BEM LOUCO😁">
+      <img src="img/nabosnecria.png" style="width:100%" onclick="onClick(this)" alt="Um dos meus primeiros amigos dentro do Morelli estudei com nabosnão desde o 6º mas por obras do destino no 2º se separamos😢">
+    </div>
+  </div>
+
+  <!-- Paginação -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+  <!-- Modal para imagens em tamanho real com um clique-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+<!-- Professores  -->
+ <div class="imagens">
+<div id="about">
+  <h4 class="subtitulos"><b>PROFESSORES</b></h4>
+<div class="w3-row w3-grayscale-min"> 
+  <div class="w3-quarter">
+    <img src="img/patetasbuiu.png" style="width:100%" onclick="onClick(this)" alt="Buiu nosso professor separado de 23 mulheres por o acharem meu tchola, 8 penssões atrasadas para seus 8 filhos, torcedor do Corinthians que só cai, mas n tem problema o Buiu e nosso fechamento prof zika d++💯">
+    <img src="img/aline.png" style="width:101%" onclick="onClick(this)" alt="Aline nossa professora de geografia lá do 1 ano simplesmente uma ótima professora levo nois pra uns passeio muito loko lá zika d++ ela 💯">
+ </div>
+  
+ <div class="w3-quarter">
+  <img src="img/professorahis.png" style="width: 100%" onclick="onClick(this)" alt="Eliane nossa prof de história incrível e também minha vizinha sensacional essa professora!!💯">
+  <img src="img/profingles.png" style="width:101%" onclick="onClick(this)" alt="Carlão esse professor era bala d++, bixão ensinava inglês que só e passava uns filminho moh legal pra nois assistir💯">
+    
+  </div>
+  <div class="w3-quarter">
+    <img src="img/sopa.png" style="width: 100%" onclick="onClick(this)" alt="Nosso grande Sopa professor resenha d+ sempre ensinava uma sociologia nova pros aluno, os trabalho que ele passava era insano mais o grupo sempre tirava aquele 10 sinistro💯">
+    </div>
+    <div class="w3-quarter">
+      <img src="img/buiu.png" style="width: 100%" onclick="onClick(this)" alt="novamente o monstro Buiu o grande🎂">
+      </div>
+</div>
+</div>
+ 
+  
+<!-- MOMENTOS  -->
+<div id="contact">
+  <h4 class="subtitulos"><b>MOMENTOS</b></h4>
+<div class="w3-row w3-grayscale-min">
+  
+  <div class="w3-quarter">
+    <img src="img/passeiogeo.jpeg" style="width:100%" onclick="onClick(this)" alt="Um dos passeios que Aline fez com nois e com certeza o melhor que eu já fiz com a escola foi massa d+, reuniu todas as salas e tivemos momentos insanos, mas minha bunda ficou doendo por conta daquelas 10 horas de viagem🚶‍♀️">
+    <img src="img/tranalhopalhaço.png" style="width:100%" onclick="onClick(this)" alt="Nessa foto mostra essas beldades que sofreram com a produção de um grande vídeo sobre o circo é óbvio que eu era o palhaço🤡">
+ </div>
+
+ <div class="w3-quarter">
+  <img src="img/eupasseio.png" style="width:100%" onclick="onClick(this)" alt="Aqui não tem nem oque falar né apenas o astro do filme🎬">
+  <img src="img/gabrielpateta.png" style="width:100%" onclick="onClick(this)" alt="Foto de uns tempo atrás do mano Gabriel parecendo o pateta🤣">
+</div>
+
+<div class="w3-quarter">
+  <img class="cu"  src="img/cu.png" style="width:100%" onclick="onClick(this)" alt="Pós trabalho sobre circo eu e os manos mandamos essa perola ai.">
+</div>
+<div class="w3-quarter">
+  <img src="img/gabardoviado.png" style="width:100%" onclick="onClick(this)" alt="Essa última foto do gabardo 3 dias antes de seu aniversario parecendo um baitola🤦‍♂️">
+</div>
+
+<!-- Conteúdo da página final -->
+</div>
+
+<script>
+// Script para abrir e fechar a barra lateral
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Galeria de imagens modais
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+</script>
+
+<!-- Rodapé -->
+<div class="copyright">
+  Copyright © 2024 Miguel Costa. Todos os direitos reservados.
+</div>  
+
+</body>
+</html>
